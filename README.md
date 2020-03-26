@@ -246,9 +246,9 @@ If we scroll down, we will see the breadcrumbs. It means a quick view of what ha
 
 ![alt text](img/middle.png "Dashboard")
 
-The data of the request and response have been removed for this example.
+NOTE: The data of the request and response have been removed for this example.
 
-And the if we continue scrolling down we will see the User information and information about the Sentry SDK used.
+And the if we continue scrolling down we will see the User (Alexa username and Alexa device) information and the information about the Sentry SDK used.
 
 ![alt text](img/down.png "Dashboard")
 
@@ -265,7 +265,7 @@ You can see the full stacktrace clicking on the Raw button:
 
 ![alt text](img/exception-raw.png "Dashboard")
 
-Before concluding this topic, I would like to add that with Sentry you can make searches of any tag, user, environment, release.
+Before concluding this topic, I would like to add that with Sentry you can make searches of any tag, user, environment, release you have.
 
 For example:
 * Give me all the Alexa requests that came from one user and one skill:
@@ -282,3 +282,7 @@ You can save these searches as a quick ones and it will be available in one clic
 With the help of Sentry, we quickly went from having zero knowledge to understanding the error. Using the right tools at the right time can help tremendously with these kinds of issues.
 
 I've made this example in Java but you can use it in ohter languages that Alexa supports because Sentry is available in a lot of programming languages such as NodeJS, Python, Java, Kotlin, C#, PHP, Ruby, Go, iOS Android, etc.
+
+You can take a look to all the Sentry documentation [here]()https://docs.sentry.io/
+
+Regarding the pricing, Sentry has a developer plan that comes with 5.000 events per month. In our case, 5.000 Alexa requests from our Skill. You can see plans (here)[https://sentry.io/pricing/]

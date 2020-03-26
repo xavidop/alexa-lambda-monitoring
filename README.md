@@ -259,7 +259,7 @@ If we have an exception, we can see in Sentry Dashboard as well:
 
 And we can also see all the execution information clicking on the event:
 
-![alt text](img/exception-dashboard.png "Dashboard")
+![alt text](img/exception-info.png "Dashboard")
 
 Before concluding these topic, I would like to add that with Sentry you can make searches of any tag, user, environment, release.
 

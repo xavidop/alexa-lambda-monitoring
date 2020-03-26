@@ -283,6 +283,6 @@ With the help of Sentry, we quickly went from having zero knowledge to understan
 
 I've made this example in Java but you can use it in ohter languages that Alexa supports because Sentry is available in a lot of programming languages such as NodeJS, Python, Java, Kotlin, C#, PHP, Ruby, Go, iOS Android, etc.
 
-You can take a look to all the Sentry documentation [here]()https://docs.sentry.io/
+You can take a look to all the Sentry documentation [here](https://docs.sentry.io/)
 
-Regarding the pricing, Sentry has a developer plan that comes with 5.000 events per month. In our case, 5.000 Alexa requests from our Skill. You can see plans (here)[https://sentry.io/pricing/]
+Regarding the pricing, Sentry has a developer plan that comes with 5.000 events per month. In our case, 5.000 Alexa requests from our Skill. You can see plans [here](https://sentry.io/pricing/)

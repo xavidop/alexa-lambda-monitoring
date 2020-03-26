@@ -261,7 +261,11 @@ And we can also see all the execution information clicking on the event:
 
 ![alt text](img/exception-info.png "Dashboard")
 
-Before concluding these topic, I would like to add that with Sentry you can make searches of any tag, user, environment, release.
+You can see the full stacktrace clicking on the Raw button:
+
+![alt text](img/exception-raw.png "Dashboard")
+
+Before concluding this topic, I would like to add that with Sentry you can make searches of any tag, user, environment, release.
 
 For example:
 * Give me all the Alexa requests that came from one user and one skill:

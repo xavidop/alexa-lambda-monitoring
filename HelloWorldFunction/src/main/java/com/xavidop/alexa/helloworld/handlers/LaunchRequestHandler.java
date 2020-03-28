@@ -2,7 +2,6 @@ package com.xavidop.alexa.helloworld.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
-import com.amazon.ask.exception.AskSdkException;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 import com.xavidop.alexa.helloworld.monitoring.LogUtilities;
@@ -26,7 +25,11 @@ public class LaunchRequestHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
         String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
         LogUtilities.log("LaunchRequestIntent executed");
-        throw new AskSdkException("this is an exception");
+        return input.getResponseBuilder()
+                .withSpeech(speechText)
+                .withSimpleCard("HelloWorld", speechText)
+                .withReprompt(speechText)
+                .build();
     }
 
 }

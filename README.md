@@ -124,7 +124,9 @@ Why those two?
              Sentry.getContext().addTag("request_id", input.getRequestEnvelope().getRequest().getRequestId());
              Sentry.getContext().addTag("application_id", input.getRequestEnvelope().getSession().getApplication().getApplicationId());
              Sentry.getContext().addTag("session_id", input.getRequestEnvelope().getSession().getSessionId());
-     
+             if(input.getRequestEnvelope().getContext().getSystem().getPerson() != null){
+                 Sentry.getContext().addTag("person_id", input.getRequestEnvelope().getContext().getSystem().getPerson().getPersonId());
+             }
             
             //SET EXTRA USEFUL DATA FOR THE BREADCRUMB
              data.put("Request", input.getRequestEnvelope().getRequest().toString());

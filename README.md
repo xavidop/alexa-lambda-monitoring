@@ -74,7 +74,6 @@ After that we need to initialize the Sentry client. I intialize it at the same t
     public class App extends SkillStreamHandler {
     
         private static Skill getSkill() {
-            //SENTRY INITIALIZATION
             Sentry.init();
             return Skills.standard()
                     .addRequestHandlers(
@@ -86,7 +85,9 @@ After that we need to initialize the Sentry client. I intialize it at the same t
                             new FallbackIntentHandler(),
                             new ErrorHandler())
                     .addExceptionHandler(new MyExceptionHandler())
-                    .addRequestInterceptors(new LogRequestInterceptor())
+                    .addRequestInterceptors(
+                            new LogRequestInterceptor(),
+                            new LocalizationRequestInterceptor())
                     .addResponseInterceptors(new LogResponseInterceptor())
                     // Add your skill id below
                     //.withSkillId("[unique-value-here]")

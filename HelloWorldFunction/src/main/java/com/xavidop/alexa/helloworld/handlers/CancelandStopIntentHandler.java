@@ -3,6 +3,7 @@ package com.xavidop.alexa.helloworld.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import com.xavidop.alexa.helloworld.localization.LocalizationManager;
 import com.xavidop.alexa.helloworld.monitoring.LogUtilities;
 
 import java.util.Optional;
@@ -17,7 +18,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Goodbye";
+        String speechText =  LocalizationManager.getInstance().getMessage("GOODBYE_MSG");
         LogUtilities.log("CancelIntent executed");
         return input.getResponseBuilder()
                 .withSpeech(speechText)

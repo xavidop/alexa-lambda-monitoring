@@ -3,6 +3,7 @@ package com.xavidop.alexa.helloworld.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import com.xavidop.alexa.helloworld.localization.LocalizationManager;
 import com.xavidop.alexa.helloworld.monitoring.LogUtilities;
 
 import java.util.Optional;
@@ -18,7 +19,7 @@ public class HelpIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "You can say hello to me!";
+        String speechText = LocalizationManager.getInstance().getMessage("HELP_MSG");
         LogUtilities.log("HelpIntent executed");
         return input.getResponseBuilder()
                 .withSpeech(speechText)

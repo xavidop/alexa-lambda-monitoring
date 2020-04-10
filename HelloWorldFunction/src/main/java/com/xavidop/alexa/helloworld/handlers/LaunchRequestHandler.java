@@ -4,6 +4,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
+import com.xavidop.alexa.helloworld.localization.LocalizationManager;
 import com.xavidop.alexa.helloworld.monitoring.LogUtilities;
 import io.sentry.Sentry;
 import io.sentry.event.Breadcrumb;
@@ -23,7 +24,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
+        String speechText = LocalizationManager.getInstance().getMessage("WELCOME_MSG");
         LogUtilities.log("LaunchRequestIntent executed");
         return input.getResponseBuilder()
                 .withSpeech(speechText)
